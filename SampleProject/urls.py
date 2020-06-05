@@ -19,8 +19,8 @@ from django.views.generic import TemplateView
 from MyApp import views
 
 urlpatterns = [
-  path('formresult' , views.formresult),
-  path('comparisonresult' , views.comparison),
+  path('/formresult' , views.formresult),
+  path('/comparisonresult' , views.comparison),
   
 
 ]
