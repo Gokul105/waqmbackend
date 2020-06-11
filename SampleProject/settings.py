@@ -127,7 +127,8 @@ STATIC_URL = '/static/'
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
-    "https://firebase.google.com"
+    "https://firebase.google.com",
+    "https://waqm-d5f18.web.app"
     
 ]
 # Activate Django-Heroku.
