@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ORIGIN_ALLOW_ALL=True
 
 # Application definition
 
@@ -44,9 +45,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -125,13 +126,6 @@ STATIC_URL = '/static/'
 
 
 
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",
-    "https://firebase.google.com",
-    "https://waqm-d5f18.web.app",
-    "https://heroku.com",
-    "https://waqmfr0ntend.herokuapp.com"
-    
-]
+
 # Activate Django-Heroku.
 django_heroku.settings(locals())
